@@ -3,7 +3,7 @@ import json
 
 # Set the repository name and the Personal Access Token
 repository = "your_repository_name"
-pat = "DefaultEndpointsProtocol=https;AccountName=gabrielunique;AccountKey=Q0cuA+qoaj2+9gRu2dIMtoug21qEDvwY0vTV5SeMKehlGNhF59sn8BNjU2dqltach10hA4PQwgcC+AStsEcQBw=="
+pat = "removed secret"
 
 # Set the headers for the API call
 headers = {
@@ -22,3 +22,5 @@ response = requests.post(url, headers=headers, json=data)
 
 # Print the response
 print(response.json())
+
+testing = "this var is created to test code owners file."

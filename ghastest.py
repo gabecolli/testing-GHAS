@@ -3,7 +3,7 @@ import json
 
 # Set the repository name and the Personal Access Token
 repository = "your_repository_name"
-pat = "your_personal_access_token"
+pat = "sp=r&st=2023-01-23T22:24:44Z&se=2023-01-24T06:24:44Z&spr=https&sv=2021-06-08&sr=b&sig=NaosEla4%2F6phSVtyHv6Vv1y5VwJJ81YayfKTljyPYBE%3D"
 
 # Set the headers for the API call
 headers = {

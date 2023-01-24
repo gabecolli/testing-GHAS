@@ -23,4 +23,18 @@ response = requests.post(url, headers=headers, json=data)
 # Print the response
 print(response.json())
 
-testing = "this var is created to test code owners file. second attempt"
+import os
+
+def get_file_contents(file_path):
+    with open(file_path, 'r') as f:
+        contents = f.read()
+    return contents
+
+def main():
+    file_path = os.environ.get('FILE_PATH')
+    if file_path:
+        contents = get_file_contents(file_path)
+        print(contents)
+    else:
+        print("No file path provided.")
+

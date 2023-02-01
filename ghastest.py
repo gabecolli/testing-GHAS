@@ -24,3 +24,20 @@ response = requests.post(url, headers=headers, json=data)
 print(response.json())
 
 testing = "this var is created to test code owners file. second attempt"
+
+import mysql.connector
+
+def vulnerable_function(user_input):
+    db = mysql.connector.connect(
+        host="localhost",
+        user="yourusername",
+        password="yourpassword",
+        database="yourdatabase"
+    )
+    cursor = db.cursor()
+    query = "SELECT * FROM users WHERE name='" + user_input + "';"
+    cursor.execute(query)
+    result = cursor.fetchall()
+    db.close()
+    return result
+

@@ -25,14 +25,14 @@ print(response.json())
 
 testing = "this var is created to test code owners file. second attempt"
 
-import mysql.connector
+def test_alert_triggered():
+    username = "admin"
+    password = "secret"
+    if username == "admin" and password == "secret":
+        print("Access granted.")
+    else:
+        print("Access denied.")
 
-def vulnerable_function(user_input):
-    db = mysql.connector.connect(
-        host="localhost",
-        user="yourusername",
-        password="yourpassword",
-        database="yourdatabase"
     )
     cursor = db.cursor()
     query = "SELECT * FROM users WHERE name='" + user_input + "';"
